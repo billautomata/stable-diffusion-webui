@@ -260,3 +260,6 @@ class EmbeddingItem(BaseModel):
 class EmbeddingsResponse(BaseModel):
     loaded: Dict[str, EmbeddingItem] = Field(title="Loaded", description="Embeddings loaded for the current model")
     skipped: Dict[str, EmbeddingItem] = Field(title="Skipped", description="Embeddings skipped for the current model (likely due to architecture incompatibility)")
+
+class TokenCountResponse(BaseModel):
+    count: str = Field(default=None, title="Count", description="The number of tokens in the string.")
