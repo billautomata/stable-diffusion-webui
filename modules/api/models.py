@@ -266,3 +266,6 @@ class EmbeddingsResponse(BaseModel):
 class MemoryResponse(BaseModel):
     ram: dict = Field(title="RAM", description="System memory stats")
     cuda: dict = Field(title="CUDA", description="nVidia CUDA memory stats")
+
+class TokenCountResponse(BaseModel):
+    count: str = Field(default=None, title="Count", description="The number of tokens in the string.")
